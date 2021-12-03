@@ -53,6 +53,12 @@ class AppNote extends Component{
       });
   };
 
+  createNote = (title, text) => {
+    this.setState({
+      notes: [...this.state.notes,{title, text, date: new Date(), edited: false}]
+    });
+  };
+
   render(){
     return (
         
